@@ -1,17 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+use App\Http\Controllers\organizationsController;
 
 Route::get('login', function () {
     return redirect('admin/login');
@@ -27,6 +17,10 @@ Route::get('maintenance', function () {
 
 Route::group(['prefix' => 'admin', 'middleware' => 'desarrollo.creativo'], function () {
     Voyager::routes();
+
+    Route::controller(organizationsController::class)->group(function(){
+        Route::get('organizations/{organization}/toggle','toggleActive')->name('organizations.toggleActive');
+    });
 });
 
 // Clear cache

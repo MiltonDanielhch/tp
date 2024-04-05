@@ -107,6 +107,11 @@
                                             @endif
                                         </th>
                                         @endforeach
+                                        
+                                        <th style="background-color:#098429; color: white;">
+
+                                        </th>
+                                        
                                         <th class="actions text-right dt-not-orderable" style="background-color:#098429; color: white;" >{{ __('voyager::generic.actions') }}</th>
                                     </tr>
                                 </thead>
@@ -257,6 +262,21 @@
                                                 @endif
                                             </td>
                                         @endforeach
+                                        
+                                        
+                                        <td class="no-sort no-click bread-actions">
+                                            @if ($data['active'] == 1)
+                                                <a class="btn btn-sm btn-danger" data-id="1" href="{{ route('organizations.toggleActive',$data->getKey())}}">
+                                                    <i class="fa fa-thumbs-down"></i> <span class="hidden-xs hidden-sm">Deshabilitar</span>
+                                                </a>
+                                            @else
+                                                <a class="btn btn-sm btn-success" data-id="1" href="{{ route('organizations.toggleActive',$data->getKey())}}">
+                                                    <i class="fa fa-thumbs-up"></i> <span class="hidden-xs hidden-sm">Habilitar</span>
+                                                </a>
+                                            @endif
+                                        </td>
+                                        
+                                        
                                         <td class="no-sort no-click bread-actions">
                                             @foreach($actions as $action)
                                                 @if (!method_exists($action, 'massAction'))
@@ -264,6 +284,7 @@
                                                 @endif
                                             @endforeach
                                         </td>
+                                        
                                     </tr>
                                     @endforeach
                                 </tbody>
