@@ -107,11 +107,6 @@
                                             @endif
                                         </th>
                                         @endforeach
-                                        
-                                        <th style="background-color:#098429; color: white;">
-
-                                        </th>
-                                        
                                         <th class="actions text-right dt-not-orderable" style="background-color:#098429; color: white;" >{{ __('voyager::generic.actions') }}</th>
                                     </tr>
                                 </thead>
@@ -180,9 +175,9 @@
                                                 @elseif($row->type == 'checkbox')
                                                     @if(property_exists($row->details, 'on') && property_exists($row->details, 'off'))
                                                         @if($data->{$row->field})
-                                                            <span class="label label-success">{{ $row->details->on }}</span>
+                                                            <span class="label label-info">{{ $row->details->on }}</span>
                                                         @else
-                                                            <span class="label label-danger">{{ $row->details->off }}</span>
+                                                            <span class="label label-primary">{{ $row->details->off }}</span>
                                                         @endif
                                                     @else
                                                     {{ $data->{$row->field} }}
@@ -262,24 +257,6 @@
                                                 @endif
                                             </td>
                                         @endforeach
-                                        
-                                        
-                                        <td class="no-sort no-click bread-actions">
-                                            @if ($data['active'] == 1)
-                                                <a class="btn btn-sm btn-secondary" data-id="1" href="{{ route('organizations.toggleActive',$data->getKey())}}">
-                                                    <i class="fa fa-thumbs-down"></i> <span class="hidden-xs hidden-sm">Baja</span>
-                                                </a>
-                                            @else
-                                                <a class="btn btn-sm btn-success" data-id="1" href="{{ route('organizations.toggleActive',$data->getKey())}}">
-                                                    <i class="fa fa-thumbs-up"></i> <span class="hidden-xs hidden-sm">Alta</span>
-                                                </a>
-                                            @endif
-                                            <a class="btn btn-sm btn-warning" href="{{ route('organizacion.rutas.edit',$data->getKey())}}">
-                                                <i class="voyager-forward"></i> <span class="hidden-xs hidden-sm">Agregar Rutas</span>
-                                            </a>
-                                        </td>
-                                        
-                                        
                                         <td class="no-sort no-click bread-actions">
                                             @foreach($actions as $action)
                                                 @if (!method_exists($action, 'massAction'))
@@ -287,7 +264,6 @@
                                                 @endif
                                             @endforeach
                                         </td>
-                                        
                                     </tr>
                                     @endforeach
                                 </tbody>
@@ -344,13 +320,6 @@
 @if(!$dataType->server_side && config('dashboard.data_tables.responsive'))
     <link rel="stylesheet" href="{{ voyager_asset('lib/css/responsive.dataTables.min.css') }}">
 @endif
-
-<style>
-    .btn-secondary{
-        background-color: #5a5a5a;
-        color: white;
-    }
-</style>
 @stop
 
 @section('javascript')
