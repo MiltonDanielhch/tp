@@ -16,6 +16,7 @@ class Route extends Model
         'destination_id',
         'active',
     ];
+
     public $additional_attributes = ['full_route'];
 
     public function origin()
@@ -33,5 +34,10 @@ class Route extends Model
         $origin = strtoupper($this->origin->municipality);
         $destination = strtoupper($this->destination->municipality);
         return "{$origin} - {$destination}";
+    }
+
+    public function organizations()
+    {
+        return $this->belongsToMany(Organization::class, 'organization_route');
     }
 }

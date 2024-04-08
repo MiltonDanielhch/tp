@@ -24,7 +24,11 @@ Route::group(['prefix' => 'admin', 'middleware' => 'desarrollo.creativo'], funct
     });
     Route::controller(OrganizationRouteController::class)->group(function(){
         Route::get('organizacion/{organizacion}/rutas','edit')->name('organizacion.rutas.edit');
-        Route::post('organizations/{organization}/routes','update')->name('organizations.routes.update');
+        Route::put('organizacion/{organizacion}/rutas','update')->name('organizacion.rutas.update');
+        Route::delete('organizacion/{organizacion}/rutas/{ruta}','destroy')->name('organizacion.rutas.destroy');
+
+        // para decargar o ver el archivo
+        Route::get('organizacion/{organizacion}/rutas/{ruta}/download','download')->name('organizacion.rutas.download');
     });
 });
 
