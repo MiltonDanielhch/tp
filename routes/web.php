@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\organizationsController;
 use App\Http\Controllers\OrganizationRouteController;
+use App\Http\Controllers\AssociateController;
 
 Route::get('login', function () {
     return redirect('admin/login');
@@ -16,6 +17,11 @@ Route::get('maintenance', function () {
     return view('errors.maintenance');
 })->name('errors.maintenance');
 
+// Route::get('/associates/{associate}',[AssociateController::class, 'showDetails'] )->name('associates.showDetails');
+
+Route::controller(AssociateController::class)->group(function(){
+    Route::get('asociados/{id}','showDetails')->name('associates.showDetails');
+});
 Route::group(['prefix' => 'admin', 'middleware' => 'desarrollo.creativo'], function () {
     Voyager::routes();
 
