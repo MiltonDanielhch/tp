@@ -311,7 +311,7 @@ class MenuItemsTableSeeder extends Seeder
             array (
                 'id' => 19,
                 'menu_id' => 1,
-                'title' => 'Drives',
+                'title' => 'Conductores',
                 'url' => '',
                 'target' => '_self',
                 'icon_class' => 'fa fa-drivers-license-o',

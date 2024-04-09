@@ -29,12 +29,15 @@ Route::group(['prefix' => 'admin', 'middleware' => 'desarrollo.creativo'], funct
         Route::get('organizations/{organization}/toggle','toggleActive')->name('organizations.toggleActive');
     });
     Route::controller(OrganizationRouteController::class)->group(function(){
-        Route::get('organizacion/{organizacion}/rutas','edit')->name('organizacion.rutas.edit');
-        Route::put('organizacion/{organizacion}/rutas','update')->name('organizacion.rutas.update');
-        Route::delete('organizacion/{organizacion}/rutas/{ruta}','destroy')->name('organizacion.rutas.destroy');
+        Route::get('organizacion/{organizacion}/rutas','edit')->name('organizacion.rutas.edit')->middleware('auth');
+        Route::put('organizacion/{organizacion}/rutas','update')->name('organizacion.rutas.update')->middleware('auth');
+        Route::delete('organizacion/{organizacion}/rutas/{ruta}','destroy')->name('organizacion.rutas.destroy')->middleware('auth');
 
         // para decargar o ver el archivo
-        Route::get('organizacion/{organizacion}/rutas/{ruta}/download','download')->name('organizacion.rutas.download');
+        Route::get('organizacion/{organizacion}/rutas/{ruta}/download','download')->name('organizacion.rutas.download')->middleware('auth');        
+    });
+    Route::controller(AssociateController::class)->group(function(){
+        Route::get('Asociados/{id}/qr','showQrCode')->name('associates.showQrCode')->middleware('auth');    
     });
 });
 
