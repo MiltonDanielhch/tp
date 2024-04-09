@@ -11,4 +11,18 @@ class Vehicle extends Model
     use HasFactory, SoftDeletes;
 
     protected $dates = ['deleted_at'];
+    protected $fillable = [
+        'photo',
+        'class',
+        'associate_id',
+        'ruat',
+        'brand',
+        'motor',
+        'year',
+        'number_chassis',
+        'number_plate',
+        'crpva',
+        'soat'
+    ];
 }
+    

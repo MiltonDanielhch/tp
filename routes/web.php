@@ -4,14 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\organizationsController;
 use App\Http\Controllers\OrganizationRouteController;
 use App\Http\Controllers\AssociateController;
+use App\Http\Controllers\HomeController;
 
-Route::get('login', function () {
-    return redirect('admin/login');
-})->name('login');
-
-Route::get('/', function () {
-    return redirect('admin');
-});
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
+Route::post('search', [HomeController::class, 'search'])->name('search');   
 
 Route::get('maintenance', function () {
     return view('errors.maintenance');
