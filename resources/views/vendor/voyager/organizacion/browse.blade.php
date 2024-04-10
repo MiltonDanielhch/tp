@@ -265,7 +265,7 @@
                                         
                                         
                                         <td class="no-sort no-click bread-actions">
-                                            @if ($data['active'] == 1)
+                                         {{-- @if ($data['active'] == 1)
                                                 <a class="btn btn-sm btn-secondary" data-id="1" href="{{ route('organizations.toggleActive',$data->getKey())}}">
                                                     <i class="fa fa-thumbs-down"></i> <span class="hidden-xs hidden-sm">Baja</span>
                                                 </a>
@@ -273,7 +273,7 @@
                                                 <a class="btn btn-sm btn-success" data-id="1" href="{{ route('organizations.toggleActive',$data->getKey())}}">
                                                     <i class="fa fa-thumbs-up"></i> <span class="hidden-xs hidden-sm">Alta</span>
                                                 </a>
-                                            @endif
+                                            @endif--}}
                                             <a class="btn btn-sm btn-warning" href="{{ route('organizacion.rutas.edit',$data->getKey())}}">
                                                 <i class="voyager-forward"></i> <span class="hidden-xs hidden-sm">Rutas</span>
                                             </a>

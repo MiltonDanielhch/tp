@@ -1064,7 +1064,7 @@ class DataRowsTableSeeder extends Seeder
                 'id' => 66,
                 'data_type_id' => 8,
                 'field' => 'image',
-                'type' => 'text',
+                'type' => 'image',
                 'display_name' => 'Imagen',
                 'required' => 0,
                 'browse' => 1,
@@ -1205,214 +1205,6 @@ class DataRowsTableSeeder extends Seeder
             ),
             74 => 
             array (
-                'id' => 75,
-                'data_type_id' => 9,
-                'field' => 'id',
-                'type' => 'text',
-                'display_name' => 'Id',
-                'required' => 1,
-                'browse' => 0,
-                'read' => 0,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'details' => '{}',
-                'order' => 1,
-            ),
-            75 => 
-            array (
-                'id' => 76,
-                'data_type_id' => 9,
-                'field' => 'full_name',
-                'type' => 'text',
-                'display_name' => 'Nombre Completo',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{}',
-                'order' => 2,
-            ),
-            76 => 
-            array (
-                'id' => 77,
-                'data_type_id' => 9,
-                'field' => 'photo',
-                'type' => 'image',
-                'display_name' => 'Foto',
-                'required' => 0,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{}',
-                'order' => 3,
-            ),
-            77 => 
-            array (
-                'id' => 78,
-                'data_type_id' => 9,
-                'field' => 'phone',
-                'type' => 'text',
-                'display_name' => 'Telefono',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{}',
-                'order' => 4,
-            ),
-            78 => 
-            array (
-                'id' => 79,
-                'data_type_id' => 9,
-                'field' => 'ci',
-                'type' => 'text',
-                'display_name' => 'Ci',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"validation":{"rule":"unique:drivers,ci"}}',
-                'order' => 5,
-            ),
-            79 => 
-            array (
-                'id' => 80,
-                'data_type_id' => 9,
-                'field' => 'expedition_ci',
-                'type' => 'select_dropdown',
-                'display_name' => 'Expedición Ci',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"default":"BENI","options":{"BENI":"BN","SANTA CRUZ":"SC","COCHABAMBA":"CB","POTOSI":"PT","ORURO":"OR","PANDO":"PA","TARIJA":"TJ","CHUQUISACA":"CH","LA PAZ":"LP"}}',
-                'order' => 6,
-            ),
-            80 => 
-            array (
-                'id' => 81,
-                'data_type_id' => 9,
-                'field' => 'category',
-                'type' => 'text',
-                'display_name' => 'Categoria',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{}',
-                'order' => 7,
-            ),
-            81 => 
-            array (
-                'id' => 82,
-                'data_type_id' => 9,
-                'field' => 'license_number',
-                'type' => 'text',
-                'display_name' => 'Nro Licencia',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"validation":{"rule":"unique:drivers,license_number"}}',
-                'order' => 8,
-            ),
-            82 => 
-            array (
-                'id' => 83,
-                'data_type_id' => 9,
-                'field' => 'expiration_date',
-                'type' => 'text',
-                'display_name' => 'Fecha de expiración',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"validation":{"rule":"required"}}',
-                'order' => 9,
-            ),
-            83 => 
-            array (
-                'id' => 84,
-                'data_type_id' => 9,
-                'field' => 'active',
-                'type' => 'text',
-                'display_name' => 'Estado',
-                'required' => 1,
-                'browse' => 1,
-                'read' => 1,
-                'edit' => 1,
-                'add' => 1,
-                'delete' => 1,
-                'details' => '{"on":"Activo","off":"Inactivo","checked":true}',
-                'order' => 10,
-            ),
-            84 => 
-            array (
-                'id' => 85,
-                'data_type_id' => 9,
-                'field' => 'created_at',
-                'type' => 'timestamp',
-                'display_name' => 'Created At',
-                'required' => 0,
-                'browse' => 0,
-                'read' => 0,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'details' => '{}',
-                'order' => 11,
-            ),
-            85 => 
-            array (
-                'id' => 86,
-                'data_type_id' => 9,
-                'field' => 'updated_at',
-                'type' => 'timestamp',
-                'display_name' => 'Updated At',
-                'required' => 0,
-                'browse' => 0,
-                'read' => 0,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'details' => '{}',
-                'order' => 12,
-            ),
-            86 => 
-            array (
-                'id' => 87,
-                'data_type_id' => 9,
-                'field' => 'deleted_at',
-                'type' => 'timestamp',
-                'display_name' => 'Deleted At',
-                'required' => 0,
-                'browse' => 0,
-                'read' => 0,
-                'edit' => 0,
-                'add' => 0,
-                'delete' => 0,
-                'details' => '{}',
-                'order' => 13,
-            ),
-            87 => 
-            array (
                 'id' => 88,
                 'data_type_id' => 11,
                 'field' => 'id',
@@ -1427,12 +1219,12 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 1,
             ),
-            88 => 
+            75 => 
             array (
                 'id' => 89,
                 'data_type_id' => 11,
                 'field' => 'photo',
-                'type' => 'text',
+                'type' => 'image',
                 'display_name' => 'Foto',
                 'required' => 1,
                 'browse' => 1,
@@ -1443,7 +1235,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 4,
             ),
-            89 => 
+            76 => 
             array (
                 'id' => 90,
                 'data_type_id' => 11,
@@ -1459,7 +1251,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 5,
             ),
-            90 => 
+            77 => 
             array (
                 'id' => 91,
                 'data_type_id' => 11,
@@ -1475,7 +1267,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 2,
             ),
-            91 => 
+            78 => 
             array (
                 'id' => 92,
                 'data_type_id' => 11,
@@ -1491,7 +1283,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 6,
             ),
-            92 => 
+            79 => 
             array (
                 'id' => 93,
                 'data_type_id' => 11,
@@ -1507,7 +1299,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 7,
             ),
-            93 => 
+            80 => 
             array (
                 'id' => 94,
                 'data_type_id' => 11,
@@ -1523,7 +1315,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 8,
             ),
-            94 => 
+            81 => 
             array (
                 'id' => 95,
                 'data_type_id' => 11,
@@ -1539,7 +1331,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 9,
             ),
-            95 => 
+            82 => 
             array (
                 'id' => 96,
                 'data_type_id' => 11,
@@ -1555,7 +1347,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"unique:vehicles,number_chassis"}}',
                 'order' => 10,
             ),
-            96 => 
+            83 => 
             array (
                 'id' => 97,
                 'data_type_id' => 11,
@@ -1571,7 +1363,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{"validation":{"rule":"unique:vehicles,number_plate"}}',
                 'order' => 11,
             ),
-            97 => 
+            84 => 
             array (
                 'id' => 98,
                 'data_type_id' => 11,
@@ -1587,7 +1379,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 12,
             ),
-            98 => 
+            85 => 
             array (
                 'id' => 99,
                 'data_type_id' => 11,
@@ -1603,7 +1395,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 13,
             ),
-            99 => 
+            86 => 
             array (
                 'id' => 100,
                 'data_type_id' => 11,
@@ -1619,7 +1411,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 14,
             ),
-            100 => 
+            87 => 
             array (
                 'id' => 101,
                 'data_type_id' => 11,
@@ -1635,7 +1427,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 15,
             ),
-            101 => 
+            88 => 
             array (
                 'id' => 102,
                 'data_type_id' => 11,
@@ -1651,7 +1443,7 @@ class DataRowsTableSeeder extends Seeder
                 'details' => '{}',
                 'order' => 16,
             ),
-            102 => 
+            89 => 
             array (
                 'id' => 103,
                 'data_type_id' => 11,
@@ -1666,6 +1458,214 @@ class DataRowsTableSeeder extends Seeder
                 'delete' => 1,
                 'details' => '{"model":"App\\\\Models\\\\Associate","table":"associates","type":"belongsTo","column":"associate_id","key":"id","label":"full_name","pivot_table":"associates","pivot":"0","taggable":"0"}',
                 'order' => 3,
+            ),
+            90 => 
+            array (
+                'id' => 104,
+                'data_type_id' => 12,
+                'field' => 'id',
+                'type' => 'text',
+                'display_name' => 'Id',
+                'required' => 1,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 1,
+            ),
+            91 => 
+            array (
+                'id' => 105,
+                'data_type_id' => 12,
+                'field' => 'full_name',
+                'type' => 'text',
+                'display_name' => 'Nombre Completo',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 2,
+            ),
+            92 => 
+            array (
+                'id' => 106,
+                'data_type_id' => 12,
+                'field' => 'photo',
+                'type' => 'image',
+                'display_name' => 'Foto',
+                'required' => 0,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 3,
+            ),
+            93 => 
+            array (
+                'id' => 107,
+                'data_type_id' => 12,
+                'field' => 'phone',
+                'type' => 'text',
+                'display_name' => 'Telefono',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 4,
+            ),
+            94 => 
+            array (
+                'id' => 108,
+                'data_type_id' => 12,
+                'field' => 'ci',
+                'type' => 'text',
+                'display_name' => 'Ci',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"unique:drivers,ci"}}',
+                'order' => 5,
+            ),
+            95 => 
+            array (
+                'id' => 109,
+                'data_type_id' => 12,
+                'field' => 'expedition_ci',
+                'type' => 'select_dropdown',
+                'display_name' => 'Expedición Ci',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"default":"BENI","options":{"BENI":"BN","SANTA CRUZ":"SC","COCHABAMBA":"CB","POTOSI":"PT","ORURO":"OR","PANDO":"PA","TARIJA":"TJ","CHUQUISACA":"CH","LA PAZ":"LP"}}',
+                'order' => 6,
+            ),
+            96 => 
+            array (
+                'id' => 110,
+                'data_type_id' => 12,
+                'field' => 'category',
+                'type' => 'text',
+                'display_name' => 'Categoria',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{}',
+                'order' => 7,
+            ),
+            97 => 
+            array (
+                'id' => 111,
+                'data_type_id' => 12,
+                'field' => 'license_number',
+                'type' => 'text',
+                'display_name' => 'Nro Licencia',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"unique:drivers,license_number"}}',
+                'order' => 8,
+            ),
+            98 => 
+            array (
+                'id' => 112,
+                'data_type_id' => 12,
+                'field' => 'expiration_date',
+                'type' => 'text',
+                'display_name' => 'Fecha de expiración',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"validation":{"rule":"required"}}',
+                'order' => 9,
+            ),
+            99 => 
+            array (
+                'id' => 113,
+                'data_type_id' => 12,
+                'field' => 'active',
+                'type' => 'text',
+                'display_name' => 'Estado',
+                'required' => 1,
+                'browse' => 1,
+                'read' => 1,
+                'edit' => 1,
+                'add' => 1,
+                'delete' => 1,
+                'details' => '{"on":"Activo","off":"Inactivo","checked":true}',
+                'order' => 10,
+            ),
+            100 => 
+            array (
+                'id' => 114,
+                'data_type_id' => 12,
+                'field' => 'created_at',
+                'type' => 'timestamp',
+                'display_name' => 'Created At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 11,
+            ),
+            101 => 
+            array (
+                'id' => 115,
+                'data_type_id' => 12,
+                'field' => 'updated_at',
+                'type' => 'timestamp',
+                'display_name' => 'Updated At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 12,
+            ),
+            102 => 
+            array (
+                'id' => 116,
+                'data_type_id' => 12,
+                'field' => 'deleted_at',
+                'type' => 'timestamp',
+                'display_name' => 'Deleted At',
+                'required' => 0,
+                'browse' => 0,
+                'read' => 0,
+                'edit' => 0,
+                'add' => 0,
+                'delete' => 0,
+                'details' => '{}',
+                'order' => 13,
             ),
         ));
         
